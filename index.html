@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Project Backstab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Project Backstab - Un jeu d'action sociale en vue à la première personne pour 3 à 8 joueurs.">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+  <style>
+    /* Réinitialisation et styles de base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #0d0d0d;
+      color: #e0e0e0;
+      line-height: 1.6;
+    }
+    a {
+      color: #00ffff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #ff00ff;
+    }
+    /* Header et navigation */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(0, 0, 0, 0.8);
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      font-size: 1.8em;
+      color: #ffffff;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+    nav ul li {
+      margin-left: 30px;
+    }
+    /* Section Héro */
+    .hero {
+      height: 100vh;
+      background: url('hero-bg.jpg') no-repeat center center/cover;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      animation: fadeIn 2s ease;
+    }
+    .hero-content h2 {
+      font-size: 4em;
+      margin-bottom: 20px;
+      color: #ffffff;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    }
+    .hero-content p {
+      font-size: 1.5em;
+      margin-bottom: 30px;
+    }
+    .hero-content .btn {
+      background: #00ffff;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .hero-content .btn:hover {
+      background: #ff00ff;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    /* Contenu principal */
+    main {
+      padding: 100px 50px 50px;
+    }
+    section {
+      margin-bottom: 80px;
+    }
+    section h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      text-align: center;
+      position: relative;
+    }
+    section h2::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: #00ffff;
+      margin: 10px auto 0;
+    }
+    .content {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+      font-size: 1.1em;
+    }
+    .screenshot {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 30px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    }
+    /* Section Contact */
+    .contact p {
+      margin: 10px 0;
+    }
+    /* Footer */
+    footer {
+      background: #1a1a1a;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9em;
+    }
+    footer a {
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- En-tête avec navigation -->
+  <header>
+    <h1>Project Backstab</h1>
+    <nav>
+      <ul>
+        <li><a href="#presentation">Présentation</a></li>
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Section Héro -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Plongez dans l'action</h2>
+      <p>Un jeu social intense mêlant stratégie et trahison.</p>
+      <button class="btn">Découvrir</button>
+    </div>
+  </section>
+
+  <!-- Contenu principal -->
+  <main>
+    <!-- Section Présentation -->
+    <section id="presentation">
+      <h2>Présentation</h2>
+      <div class="content">
+        <p>
+          Project Backstab fusionne action en temps réel et déduction sociale pour offrir une expérience unique. 
+          Coopération et trahison se mêlent dans un univers captivant où chaque décision compte.
+        </p>
+        <img src="screenshot.jpg" alt="Capture d'écran du jeu" class="screenshot">
+      </div>
+    </section>
+
+    <!-- Section À propos du développeur -->
+    <section id="apropos">
+      <h2>À propos des développeurs</h2>
+      <div class="content">
+        <p>
+          Développé par une équipe indépendante passionnée basée en France, Project Backstab est le fruit d'une vision audacieuse 
+          alliant intensité et innovation. Nous nous engageons à repousser les limites du jeu social.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <div class="content">
+        <p>Pour les demandes presse, partenariats ou support, contactez-nous :</p>
+        <p>
+          Email : <a href="mailto:contact@projet-backstab.fr">contact@projet-backstab.fr</a><br>
+          Site web : <a href="https://projet-backstab.fr">https://projet-backstab.fr</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pied de page -->
+  <footer>
+    <p>&copy; 2025 Project Backstab Team — Tous droits réservés.</p>
+    <p><a href="/privacy-policy.html">Politique de confidentialité</a></p>
+  </footer>
+
+</body>
+</html>
